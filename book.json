@@ -1,0 +1,38 @@
+{
+    "author": "wxp201013@163.com",
+    "title": "WebAudio 入门指南",
+    "description": "介绍 WebAudio API 的概念和使用",
+    "language": "zh-hans",
+    "gitbook": ">3.0.0",
+    "links": {
+        "sidebar" : {
+            "About Me" : "https://github.com/atwxp"
+        },
+        "sharing": {
+          "facebook": false,
+          "twitter": false
+        }
+    },
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+    "generator": "site",
+    "plugins": [
+        "github",
+        "editlink"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/atwxp/webaudio-intro"
+        },
+        "editlink": {
+            "base": "https://github.com/atwxp/webaudio-intro/edit/master",
+            "label": "编辑本页"
+        }
+    }
+}
+
