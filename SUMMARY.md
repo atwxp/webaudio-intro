@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [简介](introduction/README.md)
     * [历史背景](introduction/history.md)
     * [数字化音频](introduction/digital.md)
 * [WebAudio API](api/README.md)
