@@ -1,6 +1,6 @@
 # WebAudio 入门指南
 
-主要介绍 WebAudio API 的概念和使用，其中参考了以下文档：
+主要介绍 `WebAudio API` 的概念和使用，其中参考了以下文档：
 
 - [WebAudio API - W3C](https://webaudio.github.io/web-audio-api/)
 
