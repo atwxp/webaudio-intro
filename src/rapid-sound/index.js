@@ -9,7 +9,7 @@ const myBufferLoader = new BufferLoader(context, [
 
 myBufferLoader.load()
 
-function shoot(song, round, interval, random = 0, random2) {
+function shoot(song, round, interval, random = 0, changePitch) {
     const time = context.currentTime
 
     for (let i = 0; i < round; i++) {
@@ -19,7 +19,8 @@ function shoot(song, round, interval, random = 0, random2) {
 
         source.connect(context.destination)
 
-        if (random2) {
+        if (changePitch) {
+            // pitch, 改变 detune 也有类似效果
             source.playbackRate.value = document.querySelector('input').value
         }
 
@@ -45,7 +46,7 @@ function finishLoadCallback(bufferList) {
     }, false)
 
     document.querySelector('.pitch-random-garand').addEventListener('click', () => {
-        shoot(bufferList[1], 3, .1, 0, 1)
+        shoot(bufferList[1], 3, .1, 0, true)
     }, false)
 }
 

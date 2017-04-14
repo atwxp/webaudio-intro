@@ -7,7 +7,7 @@ function playSound(context, buffer, time) {
 
     source.connect(context.destination)
 
-    source[source.start ? 'start' : 'noteOn'](time)
+    source.start(time)
 }
 
 function loadSounds(obj, context, soundMap) {
