@@ -5,7 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const context = path.resolve(__dirname, 'src')
 
-const pages = fs.readdirSync(context).filter(page => page.indexOf('.') !== 0)
+const pages = fs.readdirSync(context).filter(page => page.indexOf('.') !== 0 && page.indexOf('lib') === -1)
 
 const entry = {}
 const plugins = []
@@ -13,7 +13,9 @@ pages.forEach(page => {
     entry[page] = ['.', page, 'index.js'].join('/')
 
     plugins.push(new HtmlWebpackPlugin({
-        filename: page + '/index.html'
+        filename: './' + page + '/index.html',
+        template: './' + page + '/index.html',
+        chunks: [page]
     }))
 })
 
@@ -57,7 +59,7 @@ export default {
     },
 
     devServer: {
-        contentBase: __dirname + '/dist',
+        contentBase: __dirname,
         compress: true,
         port: 9000
     }
